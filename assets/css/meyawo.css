@@ -627,6 +627,7 @@ pre code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 10px;
 }
 
 .col {
@@ -11181,7 +11182,7 @@ p {
 .service-card:hover .body img.icon {
   margin-top: 5px;
   width: 45px;
-  margin-bottom: 15px;
+  margin-bottom: 15px
 }
 
 .service-card:hover .body .subtitle {
@@ -11412,6 +11413,25 @@ p {
   border-radius: 0;
   overflow: hidden;
 }
+.blog-card::after {
+  margin: 0;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0px,
+    transparent 6px,
+    black 3px,
+    black 8px
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
 
 .blog-card-header {
   min-width: 350px;
@@ -12236,4 +12256,150 @@ pre .code {
 
 .section-lg {
   padding: 100px 0 !important;
+}
+
+
+.MYrow {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+  gap: 20px; /* Optional: Adds space between the columns */
+  height: fit-content;
+}
+
+
+.MY1{
+  /* background-color: black; */
+  margin: 0 12px;
+  padding: 15px;
+  border: #000 solid 3px;
+
+}
+.MY1 {
+  position: relative;
+  background: #faebd7;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.MY1::after {
+  margin: 0;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0px,
+    transparent 6px,
+    black 3px,
+    black 8px
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+#portfolio{
+  /* background: linear-gradient(135deg, rgba(75, 0, 130, 0.5), rgba(100, 149, 237, 0.3)); */
+  /* background: linear-gradient(135deg, rgba(75, 0, 130, 0.6), rgba(138, 43, 226, 0.4)); */
+  /* background: linear-gradient(135deg, rgba(75, 0, 130, 0.6), rgba(255, 182, 193, 0.4)); */
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.5), rgba(255, 255, 255, 0.2));
+  
+}
+.HEADING {
+  margin: 0;
+  font-size: 25px;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.TECHSTACK{
+  margin: 0;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.frameworks {
+  justify-self: center;
+  align-self: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+}
+
+.framework-item:hover {
+  color: blue;
+}
+
+.framework-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.framework-icon {
+  height: 25px;
+  width: 25px;
+  background: transparent;
+}
+
+
+@media (max-width: 360px) {
+  .MYrow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    height: fit-content;
+
+  }
+}
+
+@media (max-width: 412px) {
+  .MYrow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 520px) {
+  .MYrow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: fit-content;
+  }
+
+  .MYrow .item {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .MYrow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: fit-content;
+  }
+
+  .MYrow .item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 820px) {
+  .MYrow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: fit-content;
+  }
+
+  .MYrow .item {
+    margin-bottom: 20px;
+  }
 }
